@@ -3,6 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 384 640" enable-background="new 0 0 384 640" xml:space="preserve">
 <g id="Form">
+	<rect id="base_1_" fill="none" width="384" height="640"/>
 	<g id="StatusBar">
 		<rect fill="#303F9F" width="384" height="21"/>
 	</g>
@@ -25,6 +26,7 @@
 	</g>
 </g>
 <g id="Welcome">
+	<rect id="base" x="404" fill="none" width="384" height="640"/>
 	<g id="StatusBar_1_">
 		<rect x="404" fill="#303F9F" width="384" height="21"/>
 	</g>
@@ -39,6 +41,7 @@
 	</g>
 </g>
 <g id="Final">
+	<rect id="base_2_" y="660" fill="none" width="384" height="586"/>
 	<g id="StatusBar_2_">
 		<rect y="660" fill="#303F9F" width="384" height="21"/>
 	</g>
