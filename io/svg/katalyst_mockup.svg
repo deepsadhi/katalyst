@@ -49,7 +49,7 @@
 		<text transform="matrix(1 0 0 1 16 712.272)" fill="#FFFFFF" font-family="'Roboto-Medium'" font-size="24px">Thank You</text>
 	</g>
 	<g id="Image">
-		<rect x="-0.5" y="729.7" fill="none" width="384" height="119"/>
+		<rect id="container" x="-0.5" y="729.7" fill="none" width="384" height="119"/>
 		<g id="asset-Image_1_">
 			<rect id="asset-container" x="147.5" y="745.2" fill="none" width="88" height="88"/>
 			<g id="asset">
