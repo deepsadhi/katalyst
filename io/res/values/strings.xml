@@ -1,3 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Katalyst</string>
+  <string name="activity_form">Katalyst</string>
+  <string name="activity_welcome">Katalyst</string>
+  <string name="activity_final">Katalyst</string>
 </resources>
