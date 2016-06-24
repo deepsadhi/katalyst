@@ -2,12 +2,13 @@ from lxml import etree
 from android import Android
 from svg import Svg
 from writer import Writer
+from magic import Magic
 
 
 import os
 import re
 
-class Katalyst(Svg, Writer):
+class Katalyst(Svg, Writer, Magic):
 	'''
 	Katalyst
 	'''
@@ -16,6 +17,7 @@ class Katalyst(Svg, Writer):
 	def __init__(self, file_path):
 		Svg.__init__(self)
 		Writer.__init__(self)
+		Magic.__init__(self)
 
 		self.io_dir = os.path.dirname(os.path.dirname(os.path.abspath(file_path)))
 		self.res_dir = os.path.join(self.io_dir, 'res')
@@ -92,15 +94,17 @@ class Katalyst(Svg, Writer):
 
 
 	def write_android_res(self):
-		if not os.path.exists(self.res_dir):
-			os.makedirs(self.res_dir)
+		# if not os.path.exists(self.res_dir):
+		# 	os.makedirs(self.res_dir)
 
-		self.values_dir = os.path.join(self.res_dir, 'values')
-		if not os.path.exists(self.values_dir):
-			os.makedirs(self.values_dir)
+		# self.values_dir = os.path.join(self.res_dir, 'values')
+		# if not os.path.exists(self.values_dir):
+		# 	os.makedirs(self.values_dir)
 
-		self.write_color()
-		self.write_action_bars_text()
+		# self.write_color()
+		# self.write_action_bars_text()
+
+		self.magic()
 
 
 	def convert_to_xml_layout(self):
