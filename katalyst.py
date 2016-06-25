@@ -112,18 +112,19 @@ class Katalyst(Svg, Writer, Magic):
 		if not os.path.exists(directory):
 			os.makedirs(directory)
 
-		svg.attrib['height'] = str(float(svg.attrib['height']) * float(drawable['multiplier']))
-		svg.attrib['width'] = str(float(svg.attrib['width']) * float(drawable['multiplier']))
+		tmp_svg = etree.fromstring(etree.tostring(svg))
 
-		# print(etree.tostring(svg, pretty_print=True).decode())
+		tmp_svg.attrib['height'] = str(float(tmp_svg.attrib['height']) * float(drawable['multiplier']))
+		tmp_svg.attrib['width'] = str(float(tmp_svg.attrib['width']) * float(drawable['multiplier']))
+
 
 		file = os.path.join(directory, 'asset.png')
 
 		img = cairo.ImageSurface(cairo.FORMAT_ARGB32,
-		                         int(float(svg.attrib['height']) * float(drawable['multiplier'])),
-		                         int(float(svg.attrib['width']) * float(drawable['multiplier'])))
+		                         int(float(tmp_svg.attrib['height'])),
+		                         int(float(tmp_svg.attrib['height'])))
 		ctx = cairo.Context(img)
-		handle = rsvg.Handle(None, str(etree.tostring(svg)))
+		handle = rsvg.Handle(None, str(etree.tostring(tmp_svg)))
 		handle.render_cairo(ctx)
 		img.write_to_png(file)
 
@@ -139,6 +140,8 @@ class Katalyst(Svg, Writer, Magic):
 		for drawable in drawables:
 			for svg in self.asset:
 				self.write_drawable(svg, drawable)
+
+		print(etree.tostring(svg, pretty_print=True).decode())
 
 
 	def write_android_res(self):

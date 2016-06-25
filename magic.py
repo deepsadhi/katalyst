@@ -60,7 +60,7 @@ class Magic():
 				for e in element.getiterator():
 					if re.match('asset-image', e.attrib['id'].lower()):
 						rect = e.getchildren()[0].attrib
-						asset = e.getchildren()[1].getchildren()[0]
+						asset = e.getchildren()[1]
 
 						nsmap = {None: 'http://www.w3.org/2000/svg',
 								 'xlink': 'http://www.w3.org/1999/xlink'}
