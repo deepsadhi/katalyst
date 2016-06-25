@@ -35,11 +35,11 @@ class Android:
 
 	def generate_xml(self, element):
 		if element.tag == 'TextView':
-			self.xml_layout.feed('<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hello Catalyst!" />')
+			self.xml_layout.feed('<TextView android:layout_width="%s" android:layout_height="%s" android:text="%s" android:textColor="%s" android:textSize="%ssp" />' % ('wrap_content', 'wrap_content', element.attrib['text'], element.attrib['text-color'], element.attrib['font-size']))
 		elif element.tag == 'Button':
-			self.xml_layout.feed('<Button android:layout_gravity="bottom|end" android:text="submit" android:layout_width="wrap_content" android:layout_height="wrap_content" />')
+			self.xml_layout.feed('<Button android:layout_gravity="bottom|end" android:text="%s" android:layout_width="wrap_content" android:background="%s" android:layout_height="wrap_content" />' % (element.attrib['text'], element.attrib['fill']))
 		elif element.tag == 'InputField':
-			self.xml_layout.feed('<EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Name"/>')
+			self.xml_layout.feed('<EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="%s"/>' % (element.attrib['hint']))
 		elif element.tag == 'Image':
 			self.xml_layout.feed('<ImageView android:layout_gravity="center" android:layout_width="200dp" android:layout_height="200dp" android:id="@+id/imageView2" android:src="@mipmap/ic_android" />')
 		elif element.tag == 'ViewGroup':

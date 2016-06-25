@@ -5,3 +5,6 @@ class Svg:
 	SVG_G    = '{' + SVG_NS + '}g'
 	SVG_RECT = '{' + SVG_NS + '}rect'
 	SVG_TEXT = '{' + SVG_NS + '}text'
+
+	def __init__(self):
+		pass

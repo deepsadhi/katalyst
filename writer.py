@@ -1,6 +1,9 @@
 from lxml import etree
 
 class Writer:
+	def __init__(self):
+		pass
+
 	def to_string(self, xml):
 		return etree.tostring(xml,
 		                      xml_declaration=True, encoding='utf-8',

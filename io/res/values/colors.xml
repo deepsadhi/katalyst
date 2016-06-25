@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <color name="background_color_1">#3F51B5</color>
-  <color name="background_color_2">#FFFFFF</color>
-  <color name="background_color_3">#303F9F</color>
+  <color name="background_color_2">#303F9F</color>
+  <color name="background_color_3">#FFFFFF</color>
   <color name="background_color_4">#D6D7D7</color>
-  <color name="text_color_1">#FFFFFF</color>
-  <color name="text_color_2">#757575</color>
+  <color name="text_color_1">#757575</color>
+  <color name="text_color_2">#FFFFFF</color>
 </resources>

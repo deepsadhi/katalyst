@@ -7,6 +7,8 @@ from magic import Magic
 
 import os
 import re
+import cairo
+import rsvg
 
 class Katalyst(Svg, Writer, Magic):
 	'''
@@ -105,6 +107,40 @@ class Katalyst(Svg, Writer, Magic):
 			# print(etree.tostring(self.android.linear_layout(view_group), pretty_print=True).decode())
 
 
+	def write_drawable(self, svg, drawable):
+		directory = os.path.join(self.res_dir, drawable['name'])
+		if not os.path.exists(directory):
+			os.makedirs(directory)
+
+		svg.attrib['height'] = str(float(svg.attrib['height']) * float(drawable['multiplier']))
+		svg.attrib['width'] = str(float(svg.attrib['width']) * float(drawable['multiplier']))
+
+		# print(etree.tostring(svg, pretty_print=True).decode())
+
+		file = os.path.join(directory, 'asset.png')
+
+		img = cairo.ImageSurface(cairo.FORMAT_ARGB32,
+		                         int(float(svg.attrib['height']) * float(drawable['multiplier'])),
+		                         int(float(svg.attrib['width']) * float(drawable['multiplier'])))
+		ctx = cairo.Context(img)
+		handle = rsvg.Handle(None, str(etree.tostring(svg)))
+		handle.render_cairo(ctx)
+		img.write_to_png(file)
+
+
+	def write_drawables(self):
+		drawables = [{'name': 'drawable-mdpi', 'multiplier': 1},
+					 {'name': 'drawable-hdpi', 'multiplier': 1.5},
+					 {'name': 'drawable-xhdpi', 'multiplier': 2},
+					 {'name': 'drawable-xxhdpi', 'multiplier': 3},
+					 {'name': 'drawable-xxxhdpi', 'multiplier': 4}
+					]
+
+		for drawable in drawables:
+			for svg in self.asset:
+				self.write_drawable(svg, drawable)
+
+
 	def write_android_res(self):
 		if not os.path.exists(self.res_dir):
 			os.makedirs(self.res_dir)
@@ -113,13 +149,15 @@ class Katalyst(Svg, Writer, Magic):
 		if not os.path.exists(self.values_dir):
 			os.makedirs(self.values_dir)
 
-		self.layouts_dir = os.path.join(self.res_dir, 'layouts')
+		self.layouts_dir = os.path.join(self.res_dir, 'layout')
 		if not os.path.exists(self.layouts_dir):
 			os.makedirs(self.layouts_dir)
 
 		self.write_color()
 		self.write_action_bars_text()
 		self.write_kxml()
+
+		self.write_drawables()
 
 
 	def convert_to_xml_layout(self):
