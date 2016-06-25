@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="activity_form">Katalyst</string>
   <string name="activity_welcome">Katalyst</string>
-  <string name="activity_final">Katalyst</string>
+  <string name="activity_form">Form</string>
+  <string name="activity_final">Thank You</string>
 </resources>

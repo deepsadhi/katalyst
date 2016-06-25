@@ -32,3 +32,33 @@ class Android:
 		element.set('name', 'activity_' + attributes['name'])
 
 		return element
+
+	def generate_xml(self, element):
+		if element.tag == 'TextView':
+			self.xml_layout.feed('<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hello Catalyst!" />')
+		elif element.tag == 'Button':
+			self.xml_layout.feed('<Button android:layout_gravity="bottom|end" android:text="submit" android:layout_width="wrap_content" android:layout_height="wrap_content" />')
+		elif element.tag == 'InputField':
+			self.xml_layout.feed('<EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Name"/>')
+		elif element.tag == 'Image':
+			self.xml_layout.feed('<ImageView android:layout_gravity="center" android:layout_width="200dp" android:layout_height="200dp" android:id="@+id/imageView2" android:src="@mipmap/ic_android" />')
+		elif element.tag == 'ViewGroup':
+			self.xml_layout.feed('<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingBottom="@dimen/activity_vertical_margin" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:orientation="vertical" tools:context="com.iusmaharjan.katalyst.MainActivity">')
+
+			for node in element.getiterator():
+				if node.getparent() == element:
+					self.generate_xml(node)
+
+			self.xml_layout.feed('</LinearLayout>')
+
+
+	def linear_layout(self, view_group):
+		self.xml_layout = etree.XMLParser()
+
+		self.generate_xml(view_group)
+
+		return self.xml_layout.close()
+
+
+
+

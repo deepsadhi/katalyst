@@ -93,18 +93,33 @@ class Katalyst(Svg, Writer, Magic):
 		self.write_to_file(self.xml_color_resources_tree, file)
 
 
+	def write_kxml(self):
+		self.parse_kxml()
+
+		view_groups = self.kxml_layout.xpath('//Kxml/ViewGroup')
+		i = 1
+		for view_group in view_groups:
+			file = os.path.join(self.layouts_dir, 'activity_' + str(i) + '.xml')
+			self.write_to_file(self.android.linear_layout(view_group), file)
+			i = i + 1
+			# print(etree.tostring(self.android.linear_layout(view_group), pretty_print=True).decode())
+
+
 	def write_android_res(self):
-		# if not os.path.exists(self.res_dir):
-		# 	os.makedirs(self.res_dir)
+		if not os.path.exists(self.res_dir):
+			os.makedirs(self.res_dir)
 
-		# self.values_dir = os.path.join(self.res_dir, 'values')
-		# if not os.path.exists(self.values_dir):
-		# 	os.makedirs(self.values_dir)
+		self.values_dir = os.path.join(self.res_dir, 'values')
+		if not os.path.exists(self.values_dir):
+			os.makedirs(self.values_dir)
 
-		# self.write_color()
-		# self.write_action_bars_text()
+		self.layouts_dir = os.path.join(self.res_dir, 'layouts')
+		if not os.path.exists(self.layouts_dir):
+			os.makedirs(self.layouts_dir)
 
-		self.magic()
+		self.write_color()
+		self.write_action_bars_text()
+		self.write_kxml()
 
 
 	def convert_to_xml_layout(self):

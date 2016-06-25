@@ -19,7 +19,19 @@ class Magic():
 		dimension = {'top': 0, 'bottom': 0, 'left': 0, 'right': 0, 'height': 0, 'width': 0}
 
 		if element.tag == self.SVG_TEXT:
-			print(element.tag)
+			attribute = element.attrib
+			transform = attribute['transform'].strip(')').split(' ')
+			x = float(transform[-2])
+			y = float(transform[-1])
+
+			font_size = int(attribute['font-size'].strip('px'))
+			font_height = self.calculate_font_height(font_size)
+
+			dimension = {'left': x, 'right': x, 'top': y-font_height, 'bottom': y}
+			dimension_property = self.generate_dimension_property(dimension, parent_dimension)
+
+			self.kxml.feed('<TextView ' + dimension_property + ' />')
+
 
 		elif element.tag == self.SVG_G:
 			rect = element.getchildren()[0]
@@ -35,26 +47,42 @@ class Magic():
 			dimension['right'] = dimension['left'] + dimension['width']
 			dimension['bottom'] = dimension['top'] + dimension['height']
 
-			print(dimension)
+			dimension_property = self.generate_dimension_property(dimension, parent_dimension)
 
 			attribute = element.attrib['id'].lower()
 			if re.match('image', attribute):
-				print(attribute)
+				# print(attribute)
+				self.kxml.feed('<Image ' + dimension_property + ' />')
 
 			elif re.match('inputfield', attribute):
-				print(attribute)
+				# print(attribute)
+				self.kxml.feed('<InputField ' + dimension_property + ' />')
 
 			elif re.match('button', attribute):
-				print(attribute)
+				# print(attribute)
+				self.kxml.feed('<Button ' + dimension_property + ' />')
 
 			else:
+				# TODO: color
+				# if 'fill' in element.attrib['fill']:
+				# 	color_property = 'fill="%s"' %
+				self.kxml.feed('<ViewGroup ' + dimension_property + '>')
+
 				for node in element.getiterator():
 					if node.getparent() == element:
 						self.recursion_magic(node, dimension)
+				self.kxml.feed('</ViewGroup>')
 
-	def magic(self):
+	def generate_dimension_property(self, dimension, parent_dimension):
+		# return ''
+		return 'left="%d" right="%d" top="%d" bottom="%d" p_left="%d" p_right="%d" p_top="%d" p_bottom="%d"' % (dimension['left'], dimension['right'], dimension['top'], dimension['bottom'], parent_dimension['left'], parent_dimension['right'], parent_dimension['top'], parent_dimension['bottom'])
+
+	def parse_kxml(self):
 		art_boards = self.svg_layout_tree.xpath('//ns:svg/ns:g',
 		                                        namespaces={'ns': self.SVG_NS})
+
+		self.kxml = etree.XMLParser()
+		self.kxml.feed('<Kxml>')
 
 		art_board_dimensions = []
 		for art_board in art_boards:
@@ -85,7 +113,13 @@ class Magic():
 
 						else:
 							self.recursion_magic(element, dimension)
-			print('-')
+
+		self.kxml.feed('</Kxml>')
+		self.kxml_layout = self.kxml.close()
+
+		# print(etree.tostring(self.kxml_layout, pretty_print=True).decode())
+
+
 
 
 
