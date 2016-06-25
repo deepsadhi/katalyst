@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="384px" height="640px" viewBox="0 0 384 640" enable-background="new 0 0 384 640" xml:space="preserve">
+<g id="Welcome">
+	<rect id="base" fill="none" width="384" height="640"/>
+	<g id="StatusBar_1_">
+		<rect fill="#570D8F" width="384" height="21"/>
+	</g>
+	<g id="ActionBar_1_">
+		<rect id="container_3_" y="21" fill="#9C1BCC" width="384" height="49"/>
+		<text transform="matrix(1 0 0 1 16 52.272)" fill="#FFFFFF" font-family="'Roboto-Medium'" font-size="20px">Katalyst</text>
+	</g>
+	<g id="Layout">
+		<rect id="container_2_" y="70" fill="#FFFFFF" width="384" height="570"/>
+		<text transform="matrix(1 0 0 1 15.4998 105.6665)" fill="#757575" font-family="'Roboto-Regular'" font-size="24px">Hello from Katalyst! :)</text>
+	</g>
+</g>
+<g id="Form">
+	<rect id="base_1_" x="434.5" fill="#FFFFFF" width="384" height="640"/>
+	<g id="StatusBar">
+		<rect x="434.5" fill="#570D8F" width="384" height="21"/>
+	</g>
+	<g id="ActionBar">
+		<rect id="container_1_" x="434.5" y="21" fill="#9C1BCC" width="384" height="49"/>
+		<text transform="matrix(1 0 0 1 450.4581 52.272)" fill="#FFFFFF" font-family="'Roboto-Medium'" font-size="20px">Form</text>
+	</g>
+	<g id="layout">
+		<rect id="container_5_" x="434.5" y="70" fill="#FFFFFF" width="384" height="570"/>
+		<text transform="matrix(1 0 0 1 450.7914 91.6665)" fill="#757575" font-family="'Roboto-Regular'" font-size="12px">Your Name</text>
+		<g id="InputField">
+			<rect x="450.2" y="99.3" fill="#FFFFFF" width="353.3" height="27"/>
+			<text transform="matrix(1 0 0 1 450.7913 120.8333)" fill="#757575" font-family="'Roboto-Regular'" font-size="16px">Name</text>
+			<line fill="none" stroke="#4343FF" stroke-miterlimit="10" x1="450.2" y1="126.3" x2="803.5" y2="126.3"/>
+		</g>
+		<g id="Button">
+			<rect x="710.7" y="160" fill="#D6D7D7" width="94" height="32"/>
+			<text transform="matrix(1 0 0 1 737.7724 179.5034)" font-family="'Roboto-Medium'" font-size="12px">SAY HI!</text>
+		</g>
+	</g>
+</g>
+<g id="Final">
+	<rect id="base_2_" y="660" fill="#FFFFFF" width="384" height="586"/>
+	<g id="StatusBar_2_">
+		<rect y="660" fill="#570D8F" width="384" height="21"/>
+	</g>
+	<g id="ActionBar_2_">
+		<rect id="container_4_" y="681" fill="#9C1BCC" width="384" height="49"/>
+		<text transform="matrix(1 0 0 1 16 712.272)" fill="#FFFFFF" font-family="'Roboto-Medium'" font-size="20px">Thank You</text>
+	</g>
+	<g id="layout_1_">
+		<rect x="0.5" y="730" fill="none" width="384" height="209"/>
+		<g id="Image">
+			<rect id="container" x="-0.5" y="729.7" fill="none" width="384" height="161.7"/>
+			<g id="asset-Image">
+				<rect id="container_6_" x="110.1" y="748.9" fill="none" width="152.5" height="152.5"/>
+				<g>
+					<g>
+						<path fill="#F3F3FF" d="M235.4,868.2c-11.5-19.1-35.2-50.1-35.2-58.3c0-8.2,0.2-46.5,0.2-46.5l-26,0.1c0,0,0.1,38.3,0.1,46.5
+							c0,8.2-23.7,39.2-35.2,58.3c-6,10-10.5,21.6,9.2,21.6c7.5,0,70.1,0,77.6,0C245.9,889.8,241.4,878.2,235.4,868.2z"/>
+						<path fill="#CADFEF" d="M231.7,868.2c-11.5-19.1-35.2-50.1-35.2-58.3c0-8.2,0.2-46.5,0.2-46.5l-26,0.1c0,0,0.1,38.3,0.1,46.5
+							c0,8.2-23.7,39.2-35.2,58.3c-6,10-10.5,21.6,9.2,21.6c7.5,0,70.1,0,77.6,0C242.2,889.8,237.7,878.2,231.7,868.2z"/>
+						<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="183.6893" y1="884.3276" x2="183.6893" y2="834.4969">
+							<stop  offset="0" style="stop-color:#570D8F"/>
+							<stop  offset="1.316357e-002" style="stop-color:#5A0E92"/>
+							<stop  offset="0.1282" style="stop-color:#7213A7"/>
+							<stop  offset="0.2577" style="stop-color:#8516B8"/>
+							<stop  offset="0.4106" style="stop-color:#9219C3"/>
+							<stop  offset="0.607" style="stop-color:#9A1BCA"/>
+							<stop  offset="1" style="stop-color:#9C1BCC"/>
+						</linearGradient>
+						<path fill="url(#SVGID_1_)" d="M204.7,837c-13.4,1.4-27.1-2.8-40.3-2.5c-6.6,10.2-15.4,22.6-20.8,31.7
+							c-5,8.4-8.8,18.1,7.7,18.1c6.3,0,58.7,0,65,0c16.5,0,12.7-9.7,7.7-18.1C218.9,857.8,211,846.7,204.7,837z"/>
+						<path opacity="0.2" fill="#231F20" enable-background="new    " d="M182.3,853.9c0-3-2.4-5.3-5.3-5.3c-2.9,0-5.3,2.4-5.3,5.3
+							s2.4,5.3,5.3,5.3C179.9,859.2,182.3,856.9,182.3,853.9z"/>
+						<path opacity="0.2" fill="#231F20" enable-background="new    " d="M190,813.8c0-1.2-1-2.1-2.1-2.1s-2.1,1-2.1,2.1
+							s1,2.1,2.1,2.1S190,815,190,813.8z"/>
+						<path opacity="0.2" fill="#231F20" enable-background="new    " d="M193.1,781.2c0-2.2-1.8-3.9-3.9-3.9s-3.9,1.8-3.9,3.9
+							c0,2.2,1.8,3.9,3.9,3.9S193.1,783.4,193.1,781.2z"/>
+						<path opacity="0.2" fill="#231F20" enable-background="new    " d="M184.6,761.6c0-3.1-2.5-5.6-5.6-5.6
+							c-3.1,0-5.6,2.5-5.6,5.6c0,3.1,2.5,5.6,5.6,5.6C182.1,767.2,184.6,764.7,184.6,761.6z"/>
+						<circle opacity="0.2" fill="#231F20" enable-background="new    " cx="183.9" cy="874.6" r="5.3"/>
+						<circle opacity="0.2" fill="#231F20" enable-background="new    " cx="189.9" cy="859.2" r="2.8"/>
+						<circle opacity="0.2" fill="#231F20" enable-background="new    " cx="185.1" cy="837.2" r="2.8"/>
+					</g>
+					<path fill="#CADFEF" stroke="#B8DDF4" stroke-width="0.5" stroke-miterlimit="10" d="M170.2,762.1h30.9c2,0,3.7,1.6,3.7,3.7
+						l0,0c0,2-1.6,3.7-3.7,3.7h-30.9c-2,0-3.7-1.6-3.7-3.7l0,0C166.5,763.7,168.2,762.1,170.2,762.1z"/>
+				</g>
+			</g>
+		</g>
+		<g id="TextView">
+			<rect x="35.5" y="942.8" fill="none" width="256" height="20.3"/>
+			<text transform="matrix(1 0 0 1 75.2925 953.3914)" fill="#757575" font-family="'Roboto-Regular'" font-size="18px">Accelerating Android Design</text>
+		</g>
+	</g>
+</g>
+</svg>
