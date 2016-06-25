@@ -141,7 +141,7 @@ class Katalyst(Svg, Writer, Magic):
 			for svg in self.asset:
 				self.write_drawable(svg, drawable)
 
-		print(etree.tostring(svg, pretty_print=True).decode())
+		# print(etree.tostring(svg, pretty_print=True).decode())
 
 
 	def write_android_res(self):
