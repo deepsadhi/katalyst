@@ -9,7 +9,7 @@ RES_DIR = os.path.join(IO_DIR, 'res')
 SVG_DIR = os.path.join(IO_DIR, 'svg')
 
 if __name__ == '__main__':
-	svg_file = os.path.join(SVG_DIR, 'katalyst_mockup.svg')
+	svg_file = os.path.join(SVG_DIR, 'katalyst_mockup_branding.svg')
 	if os.path.isfile(svg_file) is not True:
 		sys.exit(svg_file + ' file not found')
 
