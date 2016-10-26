@@ -104,7 +104,6 @@ class Katalyst(Svg, Writer, Magic):
 			file = os.path.join(self.layouts_dir, 'activity_' + str(i) + '.xml')
 			self.write_to_file(self.android.linear_layout(view_group), file)
 			i = i + 1
-			# print(etree.tostring(self.android.linear_layout(view_group), pretty_print=True).decode())
 
 
 	def write_drawable(self, svg, drawable):
@@ -141,7 +140,6 @@ class Katalyst(Svg, Writer, Magic):
 			for svg in self.asset:
 				self.write_drawable(svg, drawable)
 
-		# print(etree.tostring(svg, pretty_print=True).decode())
 
 
 	def write_android_res(self):

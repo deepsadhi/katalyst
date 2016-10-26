@@ -15,4 +15,4 @@ if __name__ == '__main__':
 	katalyst = Katalyst(svg_file)
 	katalyst.write_android_res()
 
-	print('Mockup converted to Android res')
+	print('Mock up converted to Android res')
