@@ -8,7 +8,7 @@
 
 ### Architecture
 
-![Architecture](blob/master/architecture.png?raw=true)
+![Architecture](blob/dev/architecture.png?raw=true)
 
 ### Not only layouts...
 #### We generated almost all resources required for Android Development:
