@@ -25,7 +25,7 @@
 
 ### Actual outcome
 
-![Actual outcome](outcome.png?raw=true)
+![Actual outcome](output.png?raw=true)
 
 
 ### Requirements
