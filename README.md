@@ -19,6 +19,15 @@
 * Image Assets and Drawables
 
 
+### Design mock-up
+![Design mock-up](mockup.png?raw=true)
+
+
+### Actual outcome
+
+![Actual outcome](outcome.png?raw=true)
+
+
 ### Requirements
 * python 2.x
 * [lxml](http://lxml.de/)
