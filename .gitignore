@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+io/res/*
+!io/res/.gitkeep
+
+*~
+*.swp
