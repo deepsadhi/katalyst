@@ -1,4 +1,4 @@
-from katalyst import Katalyst
+from katalyst.katalyst import Katalyst
 import os
 import sys
 
